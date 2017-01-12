@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   
+<script type="text/javascript" src="js/script.js"></script>
+ 
+    </head>
+    <body background="http://www.intrawallpaper.com/static/images/colorful_background-1920x1200_I5QjvjE.jpg">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link href="https://fonts.googleapis.com/css?family=Tangerine:400,700" rel="stylesheet">
+    <style>
+.button {
+    background-color: pink;
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+.button1 {
+    background-color: pink;
+    border: none;
+    color: #ff00ff;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+.button2 {
+    background-color: #bfbfbf;
+    border: none;
+    color: #bf80ff;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid magenta;
+    border-radius: 4px;
+}
+
+tr:nth-child(even){background-color: #33cccc}
+th {
+    background-color: cyan;
+    
+}
+div.scroll{
+    background-color: #00FFFF;
+    width: 100px;
+    height: 100px;
+    overflow:scroll;
+}
+</style>
+     <style>
+body {background-color: powderblue;
+      
+}
+h1   {color: cyan;
+	  
+	}.w3-tangerine {
+    font-family:'Tangerine', cursive;
+    font-size: 56px;
+}
+th    {color: magenta;}
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="w3-tangerine"><b>FloryManagement</b></h1>
+        </div>
+    </div>
+    <br/>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="pull-right">
+                <button class="button" data-toggle="modal" data-target="#add_new_record_modal">Adauga</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="records_content">
+                <br/>
+                <h3>Tabel Articole</h3>
+                <table id="articles" class="table table-bordered table-striped">
+						<tr>
+							<th>ID.</th>
+							<th>Denumire</th>
+							<th>Tip Material</th>
+							<th>Culoare</th>
+							<th>Modificare</th>
+							<th>Stergere</th>
+						</tr>
+            		</tr>
+				</<table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="add_new_record_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Adauga un nou articol vestimentar</h4>
+            </div>
+            <div style="scroll" class="modal-body">
+                <form id="record_form">
+                    <input type="hidden" name="id" id="id" />
+                    <div class="form-group">
+                        <label for="denumire">Denumire</label>
+                        <input type="text" name="denumire" id="denumire" placeholder="Denumire" class="form-control"/>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="tip_material">Tip Material</label>
+                        <input type="text" name="tip_material" id="tip_material" placeholder="Tip Material" rows="5" class="form-control"/>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="culoare">Culoare</label>
+                        <input name="culoare" type="text" id="culoare" placeholder="Culoare" class="form-control"/>
+                    </div>
+    
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="button" type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="button" onclick="saveRecord()">Salvare</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- // Modal -->
+
+    </body>
+</html>
